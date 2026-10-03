@@ -98,7 +98,7 @@ These reports support business insights and informed decision making.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/henryagunanne/CCINFOM-DB-APP.git
+   git clone https://github.com/eiencallado/clothing-store-management-system.git
    ```
 2. Navigate to the project directory
    ```bash
@@ -226,23 +226,3 @@ Developed collaboratively by:
 - Manatad, Francinne
   
 All members contributed to system design, implementation, testing, documentation, and integration.
-
---- 
-
-### 📄 License
-
-This project is licensed under the **MIT License**.  
-See the [LICENSE](./LICENSE) file for full details.
-
----
-
-### ⭐ Acknowledgements
-
-Thanks to the instructors and academic advisors of the CCINFOM program for guidance and support.
-
----
-
-## 📄 AI Assistance Disclosure
-
-This README file was generated with the assistance of ChatGPT and was reviewed, edited, and verified by the project authors.  
-All source code, system design, and implementation were fully developed by the authors. 
