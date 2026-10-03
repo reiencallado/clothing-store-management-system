@@ -1,12 +1,6 @@
 # CCINFOM Database Application  
 ## 👚 Clothing Store Inventory & Sales Management System
 
-![Course](https://img.shields.io/badge/Course-CCINFOM-blue)
-![Institution](https://img.shields.io/badge/Institution-De%20La%20Salle%20University-green)
-![Project Type](https://img.shields.io/badge/Project-Type%3A%20Database%20Application-lightgrey)
-![Technologies](https://img.shields.io/badge/Technologies-Java%2C%20SQL-blueviolet)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
 ---
 
 ## 📌 Project Overview
@@ -98,7 +92,7 @@ These reports support business insights and informed decision making.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/eiencallado/clothing-store-management-system.git
+   git clone https://github.com/reiencallado/clothing-store-management-system.git
    ```
 2. Navigate to the project directory
    ```bash
