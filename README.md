@@ -1,222 +1,130 @@
-# CCINFOM Database Application  
-## 👚 Clothing Store Inventory & Sales Management System
+# Clothing Store Management System
 
----
+A database-driven Java Swing application for managing a clothing retail business. This project demonstrates practical database design, CRUD operations, reporting, and a modular desktop interface built around a MySQL back end.
 
-## 📌 Project Overview
+This repository is designed to showcase strong fundamentals in database management, Java application development, and business process modeling—making it a strong portfolio project for software development and data-driven application work.
 
-The **Clothing Store Inventory & Sales Management System** is a database-driven application developed to replace manual inventory tracking and sales recording processes—typically handled via Excel—within retail environments. This system is intended as a **comprehensive solution** for managing product inventory, customer records, sales transactions, stock updates, and analytical reporting accurately and efficiently.
+## Project Overview
 
-By centralizing business data into a structured database model and integrating transactional workflows, this system enhances **operational efficiency**, **data reliability**, and **decision support** for store personnel and managers.
+The Clothing Store Management System helps manage core retail operations such as:
 
----
+- Product inventory and stock levels
+- Customer records and membership status
+- Sales representative assignments
+- Branch records and locations
+- Sales transactions
+- Business reports and summaries
 
-## 🎯 Academic & Practical Objectives
+The application presents these functions in a desktop GUI, with MySQL serving as the source of truth for all data.
 
-The system aims to:
+## Why This Project
 
-- Provide a **centralized database solution** for managing products, customers, sales reps, and branches  
-- Support **real-time transaction recording** and **inventory updates**  
-- Generate meaningful **sales and performance reports**  
-- Demonstrate effective **database-driven application design** as part of academic requirements  
+This project is a strong example of:
 
----
+- Relational database design
+- Java Swing GUI development
+- JDBC integration with MySQL
+- CRUD workflows in a business context
+- Data consistency and reporting across multiple entities
 
-## 🧩 System Architecture
+It reflects a realistic retail scenario where business data must be organized, updated, and reported from a central system.
 
-The CCINFOM system is structured around core entities essential to retail operations:
+## Features
 
-### 🗂️ Major Components
+- Product management for clothing items, categories, sizes, colors, and prices
+- Customer registration and membership tracking
+- Sales rep management by branch
+- Branch management with location and contact details
+- Sales transaction entry and processing
+- Report viewing for operational insights
+- MySQL-backed persistence with schema-driven data models
 
-- **Product:** Tracks inventory levels, attributes, categories, and pricing  
-- **Customer:** Manages customer details and purchase history  
-- **Sales Representative:** Records sales rep assignments and performance  
-- **Branch:** Handles store locations and associated staff  
-- **Transactions:** Includes sales, returns, restocking, and inventory transfers  
+## Tech Stack
 
-Each module interacts with the underlying relational database to ensure **data integrity**, **consistency**, and **traceability** of business activities.
+- Java SE
+- Java Swing (desktop GUI)
+- MySQL
+- JDBC (MySQL Connector/J)
+- SQL schema and sample data
 
----
-
-## ✨ Key Features
-
-### 📦 Inventory & Product Management
-
-- Add/update/delete products with attributes like category, size, color, and stock level  
-- Automated stock adjustments following sales or restock entries  
-- Track discontinued products and inventory thresholds
-
-### 🧍 Customer & Sales Rep Management
-
-- Maintain customer profiles with linked purchase histories  
-- Record sales rep details and associate them with branch performance  
-- Support analytical breakdowns per representative
-
-### 🧾 Transaction Workflows
-
-- Sell clothing items with validation and stock decrement  
-- Process product returns and update inventory accordingly  
-- Facilitate stock transfers between branches
-
-### 📊 Reporting
-
-- **Monthly Sales Summary**
-- **Product Performance**
-- **Sales Representative Performance**
-- **Branch Revenue Reports**
-
-These reports support business insights and informed decision making.
-
----
-
-## ⚙️ Technologies Used
-
-- **Java** – Core application logic  
-- **MySQL / SQL Database** – Data persistence and queries  
-- **SQL Scripts** – Database schema and relationships  
-- **Batch Scripts (`run.bat`, `run.sh`)** – Easy environment initialization
-
----
-
-## 🛠️ Setup & Installation
-
-### Prerequisites
-
-- Java JDK (version 8 or above)
-- MySQL Server
-- Terminal / Command Prompt
-- Git
-- IDE (optional): VSCode, Eclipse or IntelliJ IDEA
-
-### Installation Steps
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/reiencallado/clothing-store-management-system.git
-   ```
-2. Navigate to the project directory
-   ```bash
-   cd CCINFOM-DB-APP
-   ```
-3. Set up the database
-   - Open your MySQL client (MySQL Workbench, CLI, etc.)
-   - Import or execute the provided SQL schema files
-   - Ensure the database is running
-   - Update database credentials in the source code if required
-
-
-### 📁 Project Structure Reference
+## Project Structure
 
 ```text
-CCINFOM-DB-APP/
-├── lib/
-│   └── mysql-connector-j-9.3.0.jar
-├── src/
-│   ├── Driver.java
-│   └── other source files
-├── run.sh
-├── run.bat
-└── README.md
+.
+├── src/                              # Java source files
+│   ├── ClothingStoreApp.java         # Main application entry and panel navigation
+│   ├── DBConnection.java             # MySQL connection setup
+│   ├── MainMenuPanel.java            # Navigation menu
+│   ├── ProductPanel.java             # Product management UI
+│   ├── CustomerPanel.java            # Customer management UI
+│   ├── SalesRepPanel.java            # Sales rep management UI
+│   ├── BranchPanel.java              # Branch management UI
+│   ├── SalesTransactionPanel.java    # Sales transaction UI
+│   ├── ReportsPanel.java             # Reporting view
+│   └── ...
+├── lib/                              # Project dependencies
+│   ├── DBclothing.sql                # MySQL schema and seed data
+│   └── mysql-connector-j-9.3.0.jar  # JDBC driver
+├── SQL-related-files/                # Additional SQL-related assets
+├── ClothingStoreManagement_schemaGuide.pdf
+├── run.bat                          # Windows launch script
+├── run.sh                           # macOS/Linux launch script
+└── README.md                        # Project documentation
 ```
 
----
+## Database Design
 
-## ▶️ Running the Application (With External Libraries)
+The application uses a relational database modeled around a clothing retail business. Core entities include:
 
-This application requires the **MySQL Connector/J** library, which is included in the `lib/` folder.  
-You may run the system using either the provided scripts or by compiling and executing the program manually.
+- Branch
+- Product
+- Customer
+- Member
+- SalesRep
+- SalesTransaction
 
+The database schema is included in [lib/DBclothing.sql](lib/DBclothing.sql), along with sample data for development and testing.
 
-### Option 1: Run Using the Provided Scripts (Recommended)
+## Prerequisites
 
-For convenience, platform-specific run scripts are included.
+Before running the project, ensure you have:
 
-#### macOS / Linux
-```bash
-./run.sh
-```
+- Java JDK 8+ (recommended: JDK 17+)
+- MySQL Server installed and running
+- MySQL Connector/J available in the project
+- A database named `DBclothing`
 
-### Windows
+## Setup and Run
+
+### 1. Import the database schema
+
+Import the SQL script from [lib/DBclothing.sql](lib/DBclothing.sql) into MySQL.
+
+If your local MySQL credentials differ from the defaults in [src/DBConnection.java](src/DBConnection.java), update the connection settings before running the app.
+
+### 2. Run the application
+
+#### Windows
+
 ```bat
 run.bat
 ```
 
+#### macOS/Linux
 
-💡 Ensure the script has execution permission on macOS/Linux:
 ```bash
 chmod +x run.sh
-```
-or 
-```
-chmod 744 run.sh
+./run.sh
 ```
 
----
-### Option 2: Compile and Run Manually
+### 3. Enter database password when prompted
 
-Use this option if you prefer full control over the build process or are running in a restricted environment.
-Make sure you are in the source directory where Driver.java and the other .java files are located.
+The app is configured to connect to MySQL using the default username `root`, and it will prompt for the database password if needed.
 
-### macOS / Linux
-Compile:
-```bash
-javac -cp "../lib/mysql-connector-j-9.3.0.jar:." *.java
-```
-or 
-```bash
-javac -cp ".:/absolute/path/to/CCINFOM-DB-APP/lib/mysql-connector-j-9.3.0.jar:." Driver.java
-```
+## Example Use Cases
 
-Run:
-```bash
-java -cp "lib/mysql-connector-j-9.3.0.jar:src" Driver
-```
-or 
-```bash
-java -cp ".:/absolute/path/to/CCINFOM-DB-APP/libs/*" Driver
-```
-
-### Windows
-Compile:
-```bat
-javac -cp "..\lib\mysql-connector-j-9.3.0.jar;." *.java
-```
-or
-```bat
-java -cp ".;C:\absolute\path\to\CCINFOM-DB-APP\lib/mysql-connector-j-9.3.0.jar:." Driver.java
-```
-
-Run:
-```bat
-java -cp "lib\mysql-connector-j-9.3.0.jar;src" Driver
-```
-or 
-```bat
-java -cp ".;C:\absolute\path\to\CCINFOM-DB-APP\libs\*" Driver
-```
-
-### 🔧 Example (macOS)
-```bash
-javac -cp ".:/Users/yourname/Projects/CCINFOM-DB-APP/libs/*" Driver.java \
-&& java -cp ".:/Users/yourname/Projects/CCINFOM-DB-APP/libs/*" Driver
-```
-
-### ⚠️ Notes
-- The mysql-connector-j-9.3.0.jar file must remain inside the lib/ folder
-- Classpath separators differ by OS:
-    - `:` for macOS/Linux
-    - `;` for Windows
-- Ensure MySQL Server is running before launching the application
-- Driver is the main entry point of the program
-
---- 
-
-### 👥 Development Team
-
-Developed collaboratively by:
-- Agunanne, Henry
-- Adriano, Mark Luis
-- Encallado, Edlynn Rei
-- Manatad, Francinne
-  
-All members contributed to system design, implementation, testing, documentation, and integration.
+- Add and update clothing products in inventory
+- Track active customers and membership records
+- Assign sales reps to branches
+- Record customer purchases and new sales transactions
+- Review inventory and transaction summaries in reports
