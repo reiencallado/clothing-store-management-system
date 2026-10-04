@@ -2,8 +2,6 @@
 
 A database-driven Java Swing application for managing a clothing retail business. This project demonstrates practical database design, CRUD operations, reporting, and a modular desktop interface built around a MySQL back end.
 
-This repository is designed to showcase strong fundamentals in database management, Java application development, and business process modeling—making it a strong portfolio project for software development and data-driven application work.
-
 ## Project Overview
 
 The Clothing Store Management System helps manage core retail operations such as:
